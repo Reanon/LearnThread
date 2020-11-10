@@ -13,9 +13,9 @@ package syn;
 
 public class UnsafeBank {
     public static void main(String[] args) {
-        Account account = new Account(100,"基金");
-        Drawing you = new Drawing(account,50,"you");
-        Drawing wo = new Drawing(account,100,"wo");
+        SafeAccount account = new SafeAccount(100,"基金");
+        SafeDrawing you = new SafeDrawing(account,50,"you");
+        SafeDrawing wo = new SafeDrawing(account,100,"wo");
 
         you.start();
         wo.start();
@@ -37,11 +37,11 @@ class Account {
 
 //银行：模拟取款
 class Drawing extends Thread {
-    Account account;
+    SafeAccount account;
     int drawingMoney;
     int nowMoney;
 
-    public Drawing(Account account, int drawingMoney, String name) {
+    public Drawing(SafeAccount account, int drawingMoney, String name) {
         // 线程名
         super(name);
         this.account = account;
@@ -53,6 +53,7 @@ class Drawing extends Thread {
         // 判断有没有钱
         if (account.money - drawingMoney < 0) {
             System.out.println(Thread.currentThread().getName() + "钱不够，取不了");
+            return;
         }
         // sleep放大问题发生性
         try {
