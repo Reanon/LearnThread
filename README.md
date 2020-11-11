@@ -9,7 +9,7 @@
 | (3)  | :sparkles:         | 增量更新阅读笔记                                             | `:sparkles:`         |
 | (4)  | :recycle:          | 重构，主要指修改已有的阅读笔记，极少情形下会修改源码 <sub>**(注2)**</sub> | `:recycle:`          |
 | (5)  | :pencil2:          | 校对，主要指更正错别字、调整源码分组、修改源码排版等         | `:pencil2:`          |
-| (6)  | :white_check _mark: | 发布测试文件                                                 | `:white_check_mark:` |
+| (6)  | :white_check_mark: | 发布测试文件                                                 | `:white_check_mark:` |
 
 # JAVA 多线程笔记
 
