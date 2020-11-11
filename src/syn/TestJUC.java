@@ -27,5 +27,6 @@ public class TestJUC {
             e.printStackTrace();
         }
         System.out.println(list.size());
+
     }
 }
